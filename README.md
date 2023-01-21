@@ -79,7 +79,7 @@ This homework is graded based on the following criteria:
 
 You are required to submit the following for review:
 
-* The URL of the deployed application
+* The URL of the deployed application: https://erickuby.github.io/Work-Day-Scheduler/starter/index.html
 
 * The URL of the GitHub repository, with a unique name and a README describing the project
 
