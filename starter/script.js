@@ -51,3 +51,10 @@ $(".time-block").each(function() {
       $("#alert").fadeOut();
     }, 2000);
   });
+
+  // Persist events between refreshes of a page
+  $(".description").each(function() {
+    let hour = $(this).siblings(".hour").text();
+    let event = localStorage.getItem(hour);
+    $(this).val(event);
+  });
