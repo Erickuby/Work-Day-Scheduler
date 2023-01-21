@@ -1,4 +1,5 @@
 body {
+  background-color: #f2f2f2;
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 1;
@@ -15,7 +16,7 @@ textarea {
 
 .jumbotron {
   text-align: center;
-  background-color: transparent;
+  background-color: #ffffff;
   color: black;
   border-radius: 0;
   border-bottom: 10px solid black;
@@ -28,6 +29,13 @@ textarea {
 .time-block {
   text-align: center;
   border-radius: 15px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+
+.time-block:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
 .row {
@@ -40,6 +48,7 @@ textarea {
   background-color: #ffffff;
   color: #000000;
   border-top: 1px dashed #000000;
+  padding: 10px;
 }
 
 .past {
@@ -68,4 +77,5 @@ textarea {
 .saveBtn i:hover {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
+  background-color: #0069d9;
 }
