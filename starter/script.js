@@ -22,3 +22,20 @@ for (let i = 9; i < 18; i++) {
     row.append(saveBtn);
     $(".container").append(row);
   }
+  // Color-code each timeblock based on past, present, and future
+let currentHour = parseInt(moment().format("H"));
+$(".time-block").each(function() {
+    let blockHour = parseInt($(this).find(".hour").text().split(":")[0]);
+    if (blockHour < currentHour) {
+      $(this).addClass("past");
+    } else if (blockHour === currentHour) {
+      $(this).addClass("present");
+    } else {
+      $(this).addClass("future");
+    }
+  });
+  
+  // Allow a user to enter an event when they click a timeblock
+  $(".description").on("click", function() {
+    $(this).attr("readonly", false);
+  });
