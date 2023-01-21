@@ -39,3 +39,15 @@ $(".time-block").each(function() {
   $(".description").on("click", function() {
     $(this).attr("readonly", false);
   });
+
+  // Save the event in local storage when the save button is clicked in that timeblock
+  $(".saveBtn").on("click", function() {
+    let hour = $(this).siblings(".hour").text();
+    let event = $(this).siblings(".description").val();
+    localStorage.setItem(hour, event);
+    $("#alert").text("Appointment added to local storage");
+    $("#alert").show();
+    setTimeout(function(){
+      $("#alert").fadeOut();
+    }, 2000);
+  });
